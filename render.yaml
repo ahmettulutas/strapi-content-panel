@@ -3,13 +3,13 @@ services:
     name: strapi
     env: node
     plan: starter
-    buildCommand: yarn install && yarn build
-    startCommand: yarn start
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
     healthCheckPath: /_health
     autoDeploy: false
     disk:
       name: strapi-uploads
-      mountPath: /opt/render/project/src/public/uploads
+      mountPath: /src/public/uploads
       sizeGB: 1
     envVars:
       - key: NODE_VERSION
