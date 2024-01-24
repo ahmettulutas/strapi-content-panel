@@ -2,6 +2,6 @@
  * blogpost router
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from "@strapi/strapi";
 
-export default factories.createCoreRouter('api::blogpost.blogpost');
+export default factories.createCoreRouter("api::blogpost.blogpost");

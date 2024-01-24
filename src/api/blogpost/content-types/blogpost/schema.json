@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blogpost",
     "pluralName": "blogposts",
-    "displayName": "blogpost"
+    "displayName": "blogpost",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -45,20 +46,32 @@
       "required": true
     },
     "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "blogposts"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "blogposts"
     }
   }
 }

@@ -10,7 +10,8 @@ export default ({ env }) => {
         database: env("DATABASE_NAME"),
         user: env("DATABASE_USERNAME"),
         password: env("DATABASE_PASSWORD"),
-        schema: env("DATABASE_SCHEMA"),
+        ssl: env.bool("DATABASE_SSL", true),
+        schema: env("DATABASE_SCHEMA", "public"),
       },
       pool: {
         min: env.int("DATABASE_POOL_MIN", 2),

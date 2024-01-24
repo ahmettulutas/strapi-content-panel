@@ -1,5 +1,6 @@
 export default {
   config: {
+    theme: "light",
     locales: [
       // 'ar',
       // 'fr',
@@ -29,7 +30,7 @@ export default {
       // 'zh',
     ],
   },
-  bootstrap(app) {
+  bootstrap(app: any) {
     console.log(app);
   },
 };
